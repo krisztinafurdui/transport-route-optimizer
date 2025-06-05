@@ -1,2 +1,3 @@
-/data/gtfs_extracted/
+/data/budapest_gtfs/
 .idea/
+/src/trip_map.html
