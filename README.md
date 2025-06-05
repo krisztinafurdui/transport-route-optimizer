@@ -8,9 +8,17 @@ To build a system that can process real-world public transport data and eventual
 
 ## 📂 Current Features
 
-- ✅ Parses **real GTFS static data** from [BKK FUTÁR (Budapest)](https://bkk.hu/).
-- ✅ Loads key GTFS tables like `routes.txt`, `stops.txt`, and `stop_times.txt` using `pandas`.
-- ✅ Prints sample data to confirm successful loading.
+- ✅ Load and extract GTFS zip files
+
+- ✅ Read and explore key GTFS tables: stops.txt, routes.txt, trips.txt, stop_times.txt
+
+- ✅ Display stop schedule for a specific line (e.g., bus line 105), including:
+
+  - Stop sequence
+
+  - Stop names
+
+  - Arrival and departure times
 
 ## 🔧 Project Structure
 
@@ -50,19 +58,40 @@ This will extract the GTFS zip file and load tables into pandas DataFrames.
 
 ## 📊 Example Output
 
-    stop_id  ... wheelchair_boarding
-    0  002133  ...                 NaN
-    2  003002  ...                 NaN
-    3  004716  ...                 2.0
-    4  004948  ...                 NaN
-    ...
-    
-    agency_id route_id  ... route_text_color  route_sort_order
-    0       BKK     0050  ...           FFFFFF                20
-    1       BKK     0070  ...           FFFFFF                24
-    2       BKK     0075  ...           FFFFFF                25
-    3       BKK     0078  ...           FFFFFF                26
-    4       BKK     0085  ...           FFFFFF                27
+    Directory already exists: ../data/budapest_gtfs — skipping extraction.
+    Map saved to trip_map.html
+    stop_sequence                         stop_name arrival_time departure_time
+    0               0                   Apor Vilmos tér     06:24:00       06:24:00
+    1               1       Kiss János altábornagy utca     06:25:00       06:25:00
+    2               2                    Nagy Jenő utca     06:26:00       06:26:00
+    3               3                      Márvány utca     06:27:00       06:27:00
+    4               4                   Királyhágó utca     06:28:00       06:28:00
+    5               5                          Győri út     06:29:00       06:29:00
+    6               6                           Ág utca     06:30:00       06:30:00
+    7               7                     Krisztina tér     06:32:00       06:32:00
+    8               8                    Clark Ádám tér     06:34:00       06:34:00
+    9               9              Széchenyi István tér     06:36:00       06:36:00
+    10             10                  József nádor tér     06:37:00       06:37:00
+    11             11                 Deák Ferenc tér M     06:39:00       06:40:00
+    12             12            Bajcsy-Zsilinszky út M     06:41:00       06:41:00
+    13             13                           Opera M     06:43:00       06:43:00
+    14             14                         Oktogon M     06:44:00       06:44:00
+    15             15                 Vörösmarty utca M     06:46:00       06:46:00
+    16             16                   Kodály körönd M     06:47:00       06:47:00
+    17             17                      Bajza utca M     06:48:00       06:48:00
+    18             18                      Hősök tere M     06:51:00       06:51:00
+    19             19     Vágány utca / Dózsa György út     06:52:00       06:52:00
+    20             20      Lehel utca / Dózsa György út     06:53:00       06:53:00
+    21             21                          Hun utca     06:54:00       06:54:00
+    22             22  Lehel utca / Róbert Károly körút     06:56:00       06:56:00
+    23             23                          Béke tér     06:57:00       06:57:00
+    24             24                    Frangepán utca     06:58:00       06:58:00
+    25             25                     Fiastyúk utca     07:00:00       07:00:00
+    26             26                     Násznagy utca     07:01:00       07:01:00
+    27             27                 József Attila tér     07:03:00       07:03:00
+    28             28               Cziffra György park     07:05:00       07:05:00
+    29             29                  Gyöngyösi utca M     07:07:00       07:07:00
+
 
 ## 📌 Next Steps
 
